@@ -1,0 +1,20 @@
+# Here I have the store iventory along with the quantity and price
+/** storeinventory
+ps4 controllers(7),($40)
+airpods pro(5),($150)
+videogames(20),($60)
+merchandise(10),($35)**/
+# Here I create a table to order by the name, instore quantity, the price, sold quantity, the remaining quantity, and the revenue quantity
+CREATE TABLE inventory (id INTEGER PRIMARY KEY, name TEXT,instore INTEGER, price INTEGER, sold INTEGER,remaining INTEGER, revenue INTEGER);
+# Here I put values into the table and columns
+INSERT INTO inventory VALUES (1, "ps4 controllers",7, 40, 5,
+2,200);
+INSERT INTO inventory VALUES (2, "airpods pro",5, 150, 3, 2, 450);
+INSERT INTO inventory VALUES (3, "videogames",20, 60, 5, 15, 300);
+INSERT INTO inventory VALUES (4, "merchandise",10,35, 8, 2, 280);
+SELECT * FROM inventory;
+# Here I made other querying tablets to show the total quantity that the store had, the revenue made, the total quantity of prouducts sold, and the quantity remaining
+SELECT SUM(instore) FROM inventory;
+SELECT SUM(revenue) FROM inventory;
+SELECT SUM(sold) FROM inventory;
+SELECT SUM(remaining) FROM inventory;
