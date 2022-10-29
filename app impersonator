@@ -1,0 +1,8 @@
+CREATE TABLE status ( id INTEGER PRIMARY KEY, friends INTEGER, posts INTEGER, followers INTEGER);
+INSERT INTO status VALUES (1, 100,10, 500);
+INSERT INTO status VALUES (2, 150,16, 50);
+SELECT * FROM status;
+UPDATE status SET friends= 200 WHERE id=1;
+SELECT * FROM status;
+DELETE FROM status WHERE id=2;
+SELECT * FROM status;
